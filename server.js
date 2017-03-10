@@ -25,6 +25,7 @@
   app.set("view engine", "pug");
 
   app.get("/", function(req, res) {
+    console.log("come to Home Page!");
     return res.render("index");
   });
 

@@ -13,6 +13,7 @@ app.use express["static"] __dirname + "/public"
 app.set "view engine", "pug"
 
 app.get "/", (req, res) ->
+	console.log "come to Home Page!"
 	res.render "index"
 
 app.post "/new-tov", (req, res) ->

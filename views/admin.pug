@@ -1,0 +1,30 @@
+html
+	head
+		meta(charset="utf-8")
+		link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u", crossorigin="anonymous")
+		link(rel="stylesheet" href="css/style2.css")
+	body(ng-app="app")
+		.container(style="margin-top: 50px;")
+			.row
+				.col-md-3.col-sm-3
+					ul.nav
+						li
+							a Заказы
+				.col-md-9.col-sm-9
+					.row
+						for i in data
+							.col-md-4.col-sm-4
+								.thumbnail
+									.caption
+										h3= i.name
+										ul
+											li= "Кол: " + i.count
+											li= "Номер: " + i.number_home
+											li= "id: " + i.id_of_vk
+									button.btn.btn-success.yes Одобрить
+									button.btn.btn-danger.no Отказать
+									button.btn.ready Готово
+									span.display-none= i.id
+
+		script(src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js")
+		script(src="js/main2.js")
